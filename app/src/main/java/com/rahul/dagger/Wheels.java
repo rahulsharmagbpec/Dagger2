@@ -7,9 +7,13 @@ import javax.inject.Inject;
 public class Wheels {
 
     private static final String TAG = "Wheels";
+    private Rims rims;
+    private Tires tires;
 
-    @Inject
-    Wheels() {
+
+    Wheels(Rims rims, Tires tires) {
         Log.e(TAG, "Wheels constructor ");
+        this.rims = rims;
+        this.tires = tires;
     }
 }
